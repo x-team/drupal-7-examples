@@ -1,0 +1,4 @@
+name = Simple Page
+description = Demonstrates building a simple page
+core = 7.x
+package = X-Team

@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Simple page demo module file.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function simple_page_menu() {
+  $items = array();
+  $items['simple-page'] = array(
+    'title' => 'Simple page demo',
+    'description' => 'Demonstrates building a simple page',
+    'page callback' => 'simple_page_output',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Page callback function.
+ *
+ * @return string
+ *   The output for the page.
+ */
+function simple_page_output() {
+  drupal_set_title("Simple page title");
+  return "This is a simple page";
+}
